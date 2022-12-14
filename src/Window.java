@@ -11,7 +11,7 @@ public class Window {
     private final JTextPane md5Field = new JTextPane();
     private final JTextPane sha1Field = new JTextPane();
     private final JTextPane sha256Field = new JTextPane();
-    private final JCheckBox cacheCheckBox = new JCheckBox();
+    private final JCheckBox cacheCheckBox = new JCheckBox("Cache the hash");
 
     public Window() {
         frame.setLayout(null);
@@ -79,13 +79,8 @@ public class Window {
         frame.add(tipLabel);
 
         cacheCheckBox.setSelected(true);
-        cacheCheckBox.setBounds(360, 220, 20, 20);
+        cacheCheckBox.setBounds(360, 220, 120, 20);
         frame.add(cacheCheckBox);
-
-        JLabel cacheLabel = new JLabel("Cache the hash");
-        cacheLabel.setForeground(Color.BLACK);
-        cacheLabel.setBounds(380, 220, 100, 20);
-        frame.add(cacheLabel);
 
         frame.repaint();
     }

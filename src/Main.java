@@ -6,7 +6,7 @@ import java.io.IOException;
 public class Main {
     private static final HashMap<String, String[]> cache = new HashMap<>();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedLookAndFeelException, ClassNotFoundException, InstantiationException, IllegalAccessException {
         Window app = new Window();
 
         app.getOpenButton().addActionListener((l) -> {

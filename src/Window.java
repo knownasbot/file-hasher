@@ -13,13 +13,15 @@ public class Window {
     private final JTextPane sha256Field = new JTextPane();
     private final JCheckBox cacheCheckBox = new JCheckBox("Cache the hash");
 
-    public Window() {
+    public Window() throws UnsupportedLookAndFeelException, ClassNotFoundException, InstantiationException, IllegalAccessException {
         frame.setLayout(null);
         frame.setVisible(true);
         frame.setResizable(false);
         frame.setSize(500, 280);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 
         JLabel pathLabel = new JLabel("Select the file:");
         pathLabel.setForeground(Color.BLACK);
